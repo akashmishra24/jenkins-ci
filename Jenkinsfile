@@ -1,11 +1,20 @@
+//Declarative
 node {
-	stage('Build') {
-		echo "Build"
-	}
-	stage('Test') {
-		echo "Test"
-	}
-	stage('Integration Test') {
-		echo "Integration Test"
-	}
+    stages {
+        stage('Build'){
+            steps {
+                echo "Build stage"
+            }
+        }
+        stage('UAT'){
+            steps {
+                echo "UAT stage"
+            }
+        }
+        stage('Integration'){
+            steps {
+                echo "Integration stage"
+            }
+        }
+    }
 }
